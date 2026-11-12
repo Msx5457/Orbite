@@ -1,0 +1,14 @@
+INSTALLATION (XAMPP / WAMP / Laragon)
+
+1. Copie tout le dossier "orbite" dans htdocs (XAMPP) ou www (WAMP).
+2. Lance Apache et MySQL.
+3. Ouvre phpMyAdmin > onglet "Importer" > choisis database.sql > Exécuter.
+   (ça crée la base "orbite" et la table "users")
+4. Si besoin, adapte api/config.php (utilisateur / mot de passe MySQL).
+5. Va sur http://localhost/orbite/  (PAS en double-cliquant sur index.html).
+
+Structure :
+  index.html        le site (la connexion appelle api/auth.php)
+  api/auth.php      inscription / connexion / déconnexion / session
+  api/config.php    connexion MySQL (PDO)
+  database.sql      création de la base
